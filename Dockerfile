@@ -5,6 +5,7 @@ FROM ubuntu:latest
 RUN apt-get update && apt-get install -y \
     curl \
     unzip \
+    openjdk-8-jdk \
     && rm -rf /var/lib/apt/lists/*
 
 # Download and install Android SDK
@@ -19,4 +20,3 @@ RUN mkdir -p ${ANDROID_SDK_ROOT} && cd ${ANDROID_SDK_ROOT} \
 # Set up environment variables
 ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 ENV PATH=${PATH}:${JAVA_HOME}/bin
-
