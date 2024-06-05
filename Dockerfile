@@ -20,7 +20,3 @@ RUN mkdir -p ${ANDROID_SDK_ROOT} && cd ${ANDROID_SDK_ROOT} \
 ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 ENV PATH=${PATH}:${JAVA_HOME}/bin
 
-# Install OpenJDK (if not already installed)
-RUN apt-get update && apt-get install -y \
-    openjdk-8-jdk \
-    && rm -rf /var/lib/apt/lists/*
